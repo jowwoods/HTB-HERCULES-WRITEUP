@@ -83,7 +83,7 @@ Port 445 on macOS is locked by Apple SMBd at the kernel level. You can `launchct
 
 The infrastructure that finally worked:
 
-- Docker container kali-pingpong running the HTB VPN on tun0
+- Docker container kali running the HTB VPN on tun0
 - Responder inside the container, bound to tun0:445
 - Mac VPN killed (two VPNs with the same IP conflict)
 - socat forward Mac:445 to Docker:445 (never worked, kernel blocked it anyway)
